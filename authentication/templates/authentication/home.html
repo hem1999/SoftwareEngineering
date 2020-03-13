@@ -1,0 +1,141 @@
+<head>
+	<title></title>
+    <style>
+/* // Basic styles for our grid (default view) */
+.block-item {
+	@include fill-parent;
+	
+	color: color-white;
+	float: none;
+	margin-bottom: rem(35);
+	text-align: center;
+	
+	@include media($phone-landscape) {
+		@include span-columns(6);
+		@include omega(2n);
+		@include transition (all .5s ease-in-out);
+	}
+	
+	@include media($tablet-landscape) {
+		@include span-columns(4);
+		@include omega-reset(2n);
+		@include omega(3n);
+	}
+	h1 {
+		margin: 0;
+	}
+	
+	img {
+		border-radius: 100%;
+	}
+}
+
+/* // Set styles for a checked radio/option */
+.view-radio {
+	display: none;
+	
+	+ label {
+		@include transition (all 0.2s ease-in-out);
+		
+		color: $color-white;
+		cursor: pointer;
+		display: inline-block;
+		font-size: rem(24);
+		font-weight: 600;
+		margin: 0 rem(35) rem(35) 0;
+		
+		&:hover {
+			color: $color-astra;
+		}
+	}
+}
+
+/* // Set the checked styles for our labels */
+.view-radio:checked {
+	
+	+ label {
+		color: $color-astra;
+	}
+}
+
+/* // Styles for our List radio being checked */
+.list-view-radio:checked {
+
+	/* // Find the sibling content container div */
+	~ .content-container {
+		
+		/* // Adjust styles for the individual block items */
+		.block-item {
+			@include fill-parent;
+			@include omega;
+			@include transition (all 1s ease-in-out);
+
+			text-align: left;
+			
+			@include media($tablet-portrait) {
+				min-height: rem(300);
+			}				
+			
+			img {
+				@include size(rem(64));
+				
+				float: left;
+				margin-right: rem(15);
+				
+				@include media($tablet-portrait) {
+					@include size(rem(300));
+				}
+			}
+			
+			.entry-content {
+				overflow: hidden;
+			}
+		}
+	}	
+}    
+    </style>
+</head>
+
+<body bgcolor="#f1f1f1">
+<div class="wrap">
+        <h1 class="pen-title" align="center">WELCOME HOME</h1>
+        
+        <!-- Begin Your Code -->
+        
+        <section class="content">
+            <br>
+            <br>
+            <br>
+             <br>
+            <br>
+            <br>
+           
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                            {% if user.is_authenticated %}
+                            <li class="nav-item">
+                                   <h2 align="center"> <a class="nav-link js-scroll-trigger" href="{% url 'dashboard' %}">{{ user.username }}'s DASHBOARD</a></h2>
+                                  </li>
+                                 
+                                  <li class="nav-item">
+                                    <h2 align="center"><a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">LOGOUT</a></h2>
+                                  </li>
+                            
+                          {% else %}
+                      <li class="nav-item">
+                       <h2 align="center"> <a class="nav-link js-scroll-trigger" href="{% url 'signin' %}">SIGN IN</a></h2>
+                      </li>
+                     
+                      <li class="nav-item">
+                        <h2 align="center"><a class="nav-link js-scroll-trigger" href="{% url 'signup' %}">SIGN UP</a></h2>
+                      </li>
+                      {% endif %}
+                    </ul>
+                  </div>
+            
+            <h2 align="center"><a href="http://127.0.0.1:8000/searchauthor/searchauthor/" id='searchauthorlink'>SEARCH</a></h2>
+        </section>
+    
+        <!-- End Your Code -->
+    </div><!-- .wrap -->
+</body>

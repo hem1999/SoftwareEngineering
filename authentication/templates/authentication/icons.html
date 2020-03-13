@@ -1,0 +1,832 @@
+<!--
+
+=========================================================
+* Now UI Dashboard - v1.5.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/now-ui-dashboard
+* Copyright 2019 Creative Tim (http://www.creative-tim.com)
+
+* Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Now UI Dashboard by Creative Tim
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- CSS Files -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="orange">
+      <div class="logo">
+        <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+          CT
+        </a>
+        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
+          Creative Tim
+        </a>
+      </div>
+      <div class="sidebar-wrapper" id="sidebar-wrapper">
+        <ul class="nav">
+          <li>
+            <a href="./dashboard.html">
+              <em class="now-ui-icons design_app"></em>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="active ">
+            <a href="./icons.html">
+              <em class="now-ui-icons education_atom"></em>
+              <p>Icons</p>
+            </a>
+          </li>
+          <li>
+            <a href="./map.html">
+              <em class="now-ui-icons location_map-big"></em>
+              <p>Maps</p>
+            </a>
+          </li>
+          <li>
+            <a href="./notifications.html">
+              <em class="now-ui-icons ui-1_bell-53"></em>
+              <p>Notifications</p>
+            </a>
+          </li>
+          <li>
+            <a href="./user.html">
+              <em class="now-ui-icons users_single-02"></em>
+              <p>User Profile</p>
+            </a>
+          </li>
+          <li>
+            <a href="./tables.html">
+              <em class="now-ui-icons design_bullet-list-67"></em>
+              <p>Table List</p>
+            </a>
+          </li>
+          <li>
+            <a href="./typography.html">
+              <em class="now-ui-icons text_caps-small"></em>
+              <p>Typography</p>
+            </a>
+          </li>
+          <li class="active-pro">
+            <a href="./upgrade.html">
+              <em class="now-ui-icons arrows-1_cloud-download-93"></em>
+              <p>Upgrade to PRO</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel" id="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent  bg-primary  navbar-absolute">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="#pablo">Icons</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navigation">
+            <form>
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Search...">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <em class="now-ui-icons ui-1_zoom-bold"></em>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#pablo">
+                  <em class="now-ui-icons media-2_sound-wave"></em>
+                  <p>
+                    <span class="d-lg-none d-md-block">Stats</span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <em class="now-ui-icons location_world"></em>
+                  <p>
+                    <span class="d-lg-none d-md-block">Some Actions</span>
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#pablo">
+                  <em class="now-ui-icons users_single-02"></em>
+                  <p>
+                    <span class="d-lg-none d-md-block">Account</span>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="panel-header panel-header-sm">
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="title">100 Awesome Nucleo Icons</h5>
+                <p class="category">Handcrafted by our friends from <a href="https://nucleoapp.com/?ref=1712">NucleoApp</a></p>
+              </div>
+              <div class="card-body all-icons">
+                <div class="row">
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons arrows-1_cloud-download-93"></em>
+                      <p>arrows-1_cloud-download-93</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons arrows-1_cloud-upload-94"></em>
+                      <p>arrows-1_cloud-upload-94</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons arrows-1_minimal-down"></em>
+                      <p>arrows-1_minimal-down</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons arrows-1_minimal-left"></em>
+                      <p>arrows-1_minimal-left</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons arrows-1_minimal-right"></em>
+                      <p>arrows-1_minimal-right</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons arrows-1_minimal-up"></em>
+                      <p>arrows-1_minimal-up</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons arrows-1_refresh-69"></em>
+                      <p>arrows-1_refresh-69</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons arrows-1_share-66 "></em>
+                      <p>arrows-1_share-66</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons business_badge"></em>
+                      <p>business_badge</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons business_bank"></em>
+                      <p>business_bank</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons business_briefcase-24" ></em>
+                      <p>business_briefcase-24</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons business_bulb-63"></em>
+                      <p>business_bulb-63</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons business_chart-bar-32"></em>
+                      <p>business_chart-bar-32</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons business_chart-pie-36"></em>
+                      <p>business_chart-pie-36</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons business_globe"></em>
+                      <p>business_globe</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons business_money-coins"></em>
+                      <p>business_money-coins</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons clothes_tie-bow"></em>
+                      <p>clothes_tie-bow</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons design_app"></em>
+                      <p>design_app</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons design_bullet-list-67"></em>
+                      <p>design_bullet-list-67</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons design_image"></em>
+                      <p>design_image</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons design_palette"></em>
+                      <p>design_palette</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons design_scissors"></em>
+                      <p>design_scissors</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons design_vector"></em>
+                      <p>design_vector</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons design-2_html5"></em>
+                      <p>design-2_html5</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons design-2_ruler-pencil"></em>
+                      <p>design-2_ruler-pencil</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons emoticons_satisfied"></em>
+                      <p>emoticons_satisfied</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons files_box"></em>
+                      <p>files_box</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons files_paper"></em>
+                      <p>files_paper</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons files_single-copy-04"></em>
+                      <p>files_single-copy-04</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons health_ambulance"></em>
+                      <p>health_ambulance</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons loader_gear"></em>
+                      <p>loader_gear</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons loader_refresh"></em>
+                      <p>loader_refresh</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons location_bookmark"></em>
+                      <p>location_bookmark</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons location_compass-05"></em>
+                      <p>location_compass-05</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons location_map-big"></em>
+                      <p>location_map-big</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons location_pin"></em>
+                      <p>location_pin</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons location_world"></em>
+                      <p>location_world</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons media-1_album"></em>
+                      <p>media-1_album</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons media-1_button-pause"></em>
+                      <p>media-1_button-pause</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons media-1_button-play"></em>
+                      <p>media-1_button-play</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons media-1_button-power"></em>
+                      <p>media-1_button-power</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons media-1_camera-compact"></em>
+                      <p>media-1_camera-compact</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons media-2_note-03"></em>
+                      <p>media-2_note-03</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons media-2_sound-wave"></em>
+                      <p>media-2_sound-wave</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons objects_diamond"></em>
+                      <p>objects_diamond</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons objects_globe"></em>
+                      <p>objects_globe</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons objects_key-25"></em>
+                      <p>objects_key-25</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons objects_planet"></em>
+                      <p>objects_planet</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons objects_spaceship"></em>
+                      <p>objects_spaceship</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons objects_support-17"></em>
+                      <p>objects_support-17</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons objects_umbrella-13"></em>
+                      <p>objects_umbrella-13</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons education_agenda-bookmark"></em>
+                      <p>education_agenda-bookmark</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons education_atom"></em>
+                      <p>education_atom</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons education_glasses"></em>
+                      <p>education_glasses</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons education_hat"></em>
+                      <p>education_hat</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons education_paper"></em>
+                      <p>education_paper</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons shopping_bag-16"></em>
+                      <p>shopping_bag-16</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons shopping_basket"></em>
+                      <p>shopping_basket</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons shopping_box"></em>
+                      <p>shopping_box</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons shopping_cart-simple"></em>
+                      <p>shopping_cart-simple</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons shopping_credit-card"></em>
+                      <p>shopping_credit-card</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons shopping_delivery-fast"></em>
+                      <p>shopping_delivery-fast</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons shopping_shop"></em>
+                      <p>shopping_shop</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons shopping_tag-content"></em>
+                      <p>shopping_tag-content</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons sport_trophy"></em>
+                      <p>sport_trophy</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons sport_user-run"></em>
+                      <p>sport_user-run</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons tech_controller-modern"></em>
+                      <p>tech_controller-modern</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons tech_headphones"></em>
+                      <p>tech_headphones</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons tech_laptop"></em>
+                      <p>tech_laptop</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons tech_mobile"></em>
+                      <p>tech_mobile</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons tech_tablet"></em>
+                      <p>tech_tablet</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons tech_tv"></em>
+                      <p>tech_tv</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons tech_watch-time"></em>
+                      <p>tech_watch-time</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons text_align-center"></em>
+                      <p>text_align-center</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons text_align-left"></em>
+                      <p>text_align-left</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons text_bold"></em>
+                      <p>text_bold</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons text_caps-small"></em>
+                      <p>text_caps-small</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons gestures_tap-01"></em>
+                      <p>gestures_tap-01</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons transportation_air-baloon"></em>
+                      <p>transportation_air-baloon</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons transportation_bus-front-12"></em>
+                      <p>transportation_bus-front-12</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons travel_info"></em>
+                      <p>travel_info</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons travel_istanbul"></em>
+                      <p>travel_istanbul</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-1_bell-53"></em>
+                      <p>ui-1_bell-53</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-1_check"></em>
+                      <p>ui-1_check</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-1_calendar-60"></em>
+                      <p>ui-1_calendar-60</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-1_lock-circle-open"></em>
+                      <p>ui-1_lock-circle-open</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-1_send"></em>
+                      <p>ui-1_send</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-1_settings-gear-63"></em>
+                      <p>ui-1_settings-gear-63</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-1_simple-add"></em>
+                      <p>ui-1_simple-add</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-1_simple-delete"></em>
+                      <p>ui-1_simple-delete</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-1_simple-remove"></em>
+                      <p>ui-1_simple-remove</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-1_zoom-bold"></em>
+                      <p>ui-1_zoom-bold</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-2_chat-round"></em>
+                      <p>ui-2_chat-round</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-2_favourite-28"></em>
+                      <p>ui-2_favourite-28</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-2_like"></em>
+                      <p>ui-2_like</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-2_settings-90"></em>
+                      <p>ui-2_settings-90</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-2_time-alarm"></em>
+                      <p>ui-2_time-alarm</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons ui-1_email-85"></em>
+                      <p>ui-1_email-85</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons users_circle-08"></em>
+                      <p>users_circle-08</p>
+                    </div>
+                  </div>
+                  <div class="font-icon-list col-lg-2 col-md-3 col-sm-4 col-xs-6 col-xs-6">
+                    <div class="font-icon-detail">
+                      <em class="now-ui-icons users_single-02"></em>
+                      <p>users_single-02</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class=" container-fluid ">
+          <nav>
+            <ul>
+              <li>
+                <a href="https://www.creative-tim.com">
+                  Creative Tim
+                </a>
+              </li>
+              <li>
+                <a href="http://presentation.creative-tim.com">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="http://blog.creative-tim.com">
+                  Blog
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright" id="copyright">
+            &copy; <script>
+              document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+            </script>, Designed by <a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/now-ui-dashboard.min.js?v=1.5.0" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+</body>
+
+</html>
