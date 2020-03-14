@@ -25,7 +25,7 @@ SECRET_KEY = '7_nl$@$kupl9y+338=20e4+yvdxcih&(^%0^5zwd-f*bs_6_^u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['herokudjangoapp.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['profilebuilder624.herokuapp.com','localhost']
 
 
 # Application definition
