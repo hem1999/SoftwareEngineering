@@ -1,6 +1,12 @@
 {
+  "authentication/tests.py": true,
+  "authentication/tests/test_auth_urls.py": true,
+  "authentication/tests/test_auth_views.py": true,
   "authentication/tests/test_auth_views.py::Testview::test_dashboard": true,
   "authentication/tests/test_auth_views.py::Testview::test_ratings": true,
   "authentication/tests/test_auth_views.py::Testview::test_status": true,
+  "authentication/tests/test_selenium_signin.py": true,
+  "profiles/tests/test_profiles_urls.py": true,
+  "profiles/tests/test_profiles_views.py": true,
   "profiles/tests/test_urls.py": true
 }
