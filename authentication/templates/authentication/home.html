@@ -1,141 +1,179 @@
 <head>
-	<title></title>
     <style>
 /* // Basic styles for our grid (default view) */
-.block-item {
-	@include fill-parent;
-	
-	color: color-white;
-	float: none;
-	margin-bottom: rem(35);
-	text-align: center;
-	
-	@include media($phone-landscape) {
-		@include span-columns(6);
-		@include omega(2n);
-		@include transition (all .5s ease-in-out);
-	}
-	
-	@include media($tablet-landscape) {
-		@include span-columns(4);
-		@include omega-reset(2n);
-		@include omega(3n);
-	}
-	h1 {
-		margin: 0;
-	}
-	
-	img {
-		border-radius: 100%;
-	}
+/******************************
+Flexbox Layout
+*******************************/
+
+.header, .nav {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
 }
 
-/* // Set styles for a checked radio/option */
-.view-radio {
-	display: none;
-	
-	+ label {
-		@include transition (all 0.2s ease-in-out);
-		
-		color: $color-white;
-		cursor: pointer;
-		display: inline-block;
-		font-size: rem(24);
-		font-weight: 600;
-		margin: 0 rem(35) rem(35) 0;
-		
-		&:hover {
-			color: $color-astra;
-		}
-	}
+.header {
+  justify-content: space-between;
 }
 
-/* // Set the checked styles for our labels */
-.view-radio:checked {
-	
-	+ label {
-		color: $color-astra;
-	}
+.nav {
+  -webkit-flex: 1;
+  flex: 1;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
 }
 
-/* // Styles for our List radio being checked */
-.list-view-radio:checked {
+@media all and (min-width: 640px) {
+  .header, .nav {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+}
 
-	/* // Find the sibling content container div */
-	~ .content-container {
-		
-		/* // Adjust styles for the individual block items */
-		.block-item {
-			@include fill-parent;
-			@include omega;
-			@include transition (all 1s ease-in-out);
+@media all and (min-width: 1030px) {
+  .nav {
+    -webkit-flex: none;
+    flex: none;
+  }
+}
 
-			text-align: left;
-			
-			@include media($tablet-portrait) {
-				min-height: rem(300);
-			}				
-			
-			img {
-				@include size(rem(64));
-				
-				float: left;
-				margin-right: rem(15);
-				
-				@include media($tablet-portrait) {
-					@include size(rem(300));
-				}
-			}
-			
-			.entry-content {
-				overflow: hidden;
-			}
-		}
-	}	
-}    
+
+/******************************
+Treehouse Styling
+*******************************/
+
+body {
+  margin: 0;
+  font-family: Helvetica;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/25480/hero-img.jpg') top center no-repeat;
+  background-size: cover;
+}
+
+.header {
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+.logo {
+  background: transparent url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/25480/treehouse-white.svg') center center no-repeat;
+  width: 195px;
+  background-size: contain;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nav {
+  list-style: none;
+}
+
+.nav li {
+  margin: 12px 0 12px 28px;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.nav li a:hover {
+  color: rgba(255,255,255,0.7);
+}
+
+.nav li:last-child a {
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+  transition: 200ms ease-in-out;
+  padding: 8px 16px 7px;
+}
+
+.nav li:last-child a:hover {
+  background: rgba(255,255,255,0.5);
+  color: #fff;
+}
+
+@media all and (min-width: 1030px) {
+  .header {
+    width: 1030px;
+    min-width: 768px;
+  }
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
     </style>
 </head>
 
-<body bgcolor="#f1f1f1">
-<div class="wrap">
-        <h1 class="pen-title" align="center">WELCOME HOME</h1>
-        
-        <!-- Begin Your Code -->
-        
-        <section class="content">
-            <br>
-            <br>
-            <br>
-             <br>
-            <br>
-            <br>
-           
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                            {% if user.is_authenticated %}
-                            <li class="nav-item">
-                                   <h2 align="center"> <a class="nav-link js-scroll-trigger" href="{% url 'dashboard' %}">{{ user.username }}'s DASHBOARD</a></h2>
-                                  </li>
-                                 
-                                  <li class="nav-item">
-                                    <h2 align="center"><a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">LOGOUT</a></h2>
-                                  </li>
-                            
-                          {% else %}
-                      <li class="nav-item">
-                       <h2 align="center"> <a class="nav-link js-scroll-trigger" href="{% url 'signin' %}">SIGN IN</a></h2>
-                      </li>
-                     
-                      <li class="nav-item">
-                        <h2 align="center"><a class="nav-link js-scroll-trigger" href="{% url 'signup' %}">SIGN UP</a></h2>
-                      </li>
-                      {% endif %}
-                    </ul>
-                  </div>
-            
-            <h2 align="center"><a href="http://127.0.0.1:8000/searchauthor/searchauthor/" id='searchauthorlink'>SEARCH</a></h2>
-        </section>
-    
-        <!-- End Your Code -->
-    </div><!-- .wrap -->
+<body >
+
+
+
+		<header class="header">
+			<!-- <h1 class="logo">Logo</h1> -->
+			<ul class="nav">
+					{% if user.is_authenticated %}
+					<li><a href="{% url 'dashboard' %}">{{ user.username }}</a></li>
+				<li><a href="{% url 'logout' %}">LOGOUT</a></li>
+					{% else %}
+				<li><a href="{% url 'signup' %}">SIGN UP</a></li>
+				
+        <li><a href="{% url 'signin' %}">SIGN IN</a></li>
+        {% endif %}
+        <div class="wrap">
+          <div class="search">
+             <input type="text" class="searchTerm" placeholder="What are you looking for?">
+             <button  type="submit" class="searchButton">
+               <i class="fa fa-search" > <a href="http://127.0.0.1:8000/searchauthor/searchauthor/" id='searchauthorlink'>SEARCH</a></i>
+            </button>
+          </div>
+       </div>
+				<!-- <h2 align="center"><a href="http://127.0.0.1:8000/searchauthor/searchauthor/" id='searchauthorlink'>SEARCH</a></h2> -->
+				
+				
+			</ul>
+		</header>
+		
 </body>

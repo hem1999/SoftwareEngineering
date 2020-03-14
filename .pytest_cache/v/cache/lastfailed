@@ -1,12 +1,16 @@
 {
-  "authentication/tests.py": true,
-  "authentication/tests/test_auth_urls.py": true,
-  "authentication/tests/test_auth_views.py": true,
+  "authentication/tests.py::TestCase": true,
+  "authentication/tests/test_auth_urls.py::Testurls": true,
+  "authentication/tests/test_auth_views.py::TestCase": true,
+  "authentication/tests/test_auth_views.py::Testview": true,
   "authentication/tests/test_auth_views.py::Testview::test_dashboard": true,
   "authentication/tests/test_auth_views.py::Testview::test_ratings": true,
   "authentication/tests/test_auth_views.py::Testview::test_status": true,
-  "authentication/tests/test_selenium_signin.py": true,
-  "profiles/tests/test_profiles_urls.py": true,
-  "profiles/tests/test_profiles_views.py": true,
+  "authentication/tests/test_selenium_signin.py::AuthenticationTestCase": true,
+  "authentication/tests/test_selenium_signin.py::LiveServerTestCase": true,
+  "authentication/tests/test_selenium_signin.py::TestCase": true,
+  "profiles/tests/test_profiles_urls.py::TestCase": true,
+  "profiles/tests/test_profiles_urls.py::TestUrls": true,
+  "profiles/tests/test_profiles_views.py::TestView": true,
   "profiles/tests/test_urls.py": true
 }

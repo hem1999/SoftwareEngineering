@@ -18,6 +18,7 @@ class Testview(TestCase):
 	def test_index(self):
 		path = reverse('index')
 		request = RequestFactory().get(path)
+
 		response = index(request)
 		assert response.status_code==200
 
@@ -25,23 +26,27 @@ class Testview(TestCase):
 
 	def test_signin(self):
 	
-		
+		path = reverse('signin')
+		request = RequestFactory().get(path)
+		print(request)
 
 		c = Client()
 		response = c.post('/signin/',{'username':'Bavish','password':'bavishprasath'},follow=True)
 		assert response.status_code==200
 
 	def test_signup(self):
-	
+		path = reverse('signup')
+		request = RequestFactory().get(path)
+
 		c = Client()
 		response = c.post('/signup/',{'name':'tester','email':'tester@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':12346789,'url':'Nothing','password':'secretismine','accounttype':'professor'})
-	
+		print(response)
 		response = c.post('/signin/',{'username':'tester','password':'secretismine'},follow=True)
 		assert response.status_code==200
 	def test_signup_student(self):
 		c = Client()
 		response = c.post('/signup/',{'name':'testerstudent','email':'tester@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':12346789,'url':'Nothing','password':'secretismine','accounttype':'Student'})
-
+		print(response)
 		response = c.post('/signin/',{'username':'tester','password':'secretismine'},follow=True)
 		assert response.status_code==200
 
@@ -90,6 +95,7 @@ class Testview(TestCase):
 		response = c.post('/signup/',{'name':'tester','email':'tester@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':12346789,'url':'Nothing','password':'secretismine','accounttype':'professor'})
 		response = c.post('/signin/',{'username':'tester','password':'secretismine'})
 		response = c.get('/logout/')
+		print(response)
 		assert response.status_code==302
 
 

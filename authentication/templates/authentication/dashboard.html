@@ -1,66 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>WELCOME DASHBOARD</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1500px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height: auto;} 
-    }
-  </style>
-</head>
-<body>
-
-<div class="container-fluid">
-  <div class="row content">
-    <div class="col-sm-3 sidenav">
-      <h4>DASHBOARD</h4>
-      <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="{% url 'dashboard' %}">HOME</a></li>
-        <li><a href="{% url 'dashboard' %}">PROFILE</a></li>
-        <li><a href="{% url 'dashboard' %}">UPDATE PROFILE</a></li>
-        <li><a href="{% url 'dashboard' %}">PROJECTS</a></li>
-        <li><a href="{% url 'dashboard' %}">REQUESTS</a></li>
-        <li><a href="http://127.0.0.1:8000/searchauthor/searchauthor/">SEARCH</a></li>
-
-      </ul><br>
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="SEARCH PROJECTS/PROFESSORS/PROFILE">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-          </button>
-        </span>
-      </div>
-    </div>
-
+{% extends "authentication/base.html" %}
+  {% block mydashboard %}
     <div class="col-sm-9">
-      <h4><small>WELCOME</small></h4>
+      <h4><marquee><small>WELCOME</small></marquee></h4>
       <hr>
       <h2>PROFILE</h2>
       
@@ -77,7 +18,7 @@
         <button type="submit" class="btn btn-success">Submit</button>
       </form>
       <br><br>
-          <form method="POST" action="{%  url 'edit' %}">
+  <form method="POST" action="{%  url 'edit' %}">
       {% csrf_token %} 
       <div class="row">
            <div class="col-md-5 pr-1">
@@ -109,7 +50,7 @@
            <div class="col-md-4 px-1">
                <div class="form-group">
                    <label>acheivement</label>
-                   <input type="text" class="form-control"  placeholder="acheivements" value="{{ user.acheivements }}" name="acheivement">
+                   <input type="text" class="form-control"  placeholder="acheivements" value="{{ user.acheivements }}" name="acheivements">
                </div>
            </div>
            
@@ -122,6 +63,12 @@
                </div>
            </div>
            
+           <!-- <div class="col-md-4 pl-1">
+               <div class="form-group">
+                   <label>Reference link</label>
+                   <input type="url" class="form-control"  placeholder="reference link" value="{{ user.url }}" name="url">
+               </div>
+           </div> -->
        </div>
 
 <div class="row">
@@ -149,3 +96,4 @@
 
 </body>
 </html>
+{% endblock %}

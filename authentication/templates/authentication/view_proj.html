@@ -1,0 +1,21 @@
+{% extends "authentication/base.html" %}
+{% block mydashboard %}
+
+<body>
+    <form  action="{% url 'add_projects' %}">
+            {% csrf_token %}
+        <input type="submit" value="ADD PROJECTS"    >
+    </form>
+    <h1>PROJECTS</h1>
+    {% for i in proj %}
+    <h2>{{ i.proj_name }}</h4><br>
+    <h4>{{ i.proj_description }}</h5>
+        <!-- <form method="POST" action="{% url 'join_team'  %}">
+                {% csrf_token %}
+            <input type="submit" value="Join Team">
+            <input type="number" value="{{ i.id }}" hidden >
+        </form> -->
+    {% endfor %}
+</body>
+</html>
+{% endblock %}

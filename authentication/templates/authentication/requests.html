@@ -1,0 +1,16 @@
+{% extends "authentication/base.html" %}
+{% block mydashboard %}
+<body>
+    <h1>Pending Requests</h1>
+      
+    {% for i in  req %}
+    <h1>{{ i.from_user }}</h1>
+    <form  method="POST" action="{% url 'requests' %}">
+        <input type="submit" value ="Accept">
+        {% csrf_token %}
+        <input type="number" hidden value="{{ i.id }}" name="id">
+    </form>
+    {% endfor %}
+</body>
+</html>
+{% endblock %}
