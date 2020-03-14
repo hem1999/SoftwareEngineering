@@ -5,7 +5,6 @@ from django.views.generic.base import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
 
-
 urlpatterns = [
     path('',views.index , name='index'),
     path('signin/', views.signin , name='signin'),
@@ -21,4 +20,3 @@ urlpatterns = [
     path('dashboard/view_projects/join_team/' , views.join_team , name = 'join_team'),
     path('dashboard/view_projects/add_projects/' , views.add_projects , name='add_projects')
 ]
-
