@@ -25,7 +25,7 @@ class AuthenticationTestCase(LiveServerTestCase):
 
 		selenium.get('http://127.0.0.1:8000/signup/')
 
-		
+
 
 		email = selenium.find_element_by_id('email')
 		email.send_keys('mytester@gmail.com')
@@ -52,7 +52,7 @@ class AuthenticationTestCase(LiveServerTestCase):
 		gender = selenium.find_element_by_id('female')
 		time.sleep(5)
 		selenium.execute_script("arguments[0].click();", gender)
-		
+
 
 
 		register = selenium.find_element_by_id('registerbutton')
@@ -162,4 +162,3 @@ class AuthenticationTestCase(LiveServerTestCase):
 		link = selenium.find_element_by_id('publication 0')
 		time.sleep(2)
 		link.click()
-

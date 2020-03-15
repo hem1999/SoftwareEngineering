@@ -30,10 +30,9 @@ class Testurls:
 		assert resolve(path).view_name=='edit'
 
 	def test_status_url(self):
-		path = reverse('status')
-		assert resolve(path).view_name=='status'
+		path = reverse('view_projects')
+		assert resolve(path).view_name=='view_projects'
 
 	def test_ratings_url(self):
 		path = reverse('ratings')
 		assert resolve(path).view_name=='ratings'
-		

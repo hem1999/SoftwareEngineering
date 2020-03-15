@@ -4,9 +4,41 @@
 <body>
     <form method="POST" action="{% url 'add_projects' %}">
             {% csrf_token %}
-        <input type="text" name="proj_name" placeholder="project name"><br>
-        <input type="text" name="proj_description" placeholder="proj_description"><br>
-        <input type="submit" value="ADD"><br>
+
+
+            <div class="row">
+
+                <div class="col-md-8 pr-1">
+                    <div class="form-group">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <label>Project Name</label>
+                        <input type="text" class="form-control"  placeholder="Proj_name"  name="proj_name" >
+                    </div>
+                </div>
+                <div class="col-md-8 px-1">
+                    <div class="form-group">
+                        <label>Project Description</label>
+                        <textarea class="form-control" rows="5"  placeholder="Proj_description" name="proj_description" required></textarea>
+                    </div>
+                </div>
+                <div class="col-md-4 pl-1">
+                    <div class="form-group">
+                            <button type="submit" class="btn btn-success pull-right">ADD</button>
+                    </div>
+                </div>   
+      </div>
+   
     </form> 
 </body>
 </html>

@@ -2,8 +2,8 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 <head>
     <style>
-    body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, 
-pre, form, fieldset, input, textarea, p, blockquote, th, td { 
+    body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea, p, blockquote, th, td {
   padding:0;
   margin:0;}
 
@@ -43,15 +43,15 @@ html{
 
 .testbox {
   margin: 20px auto;
-  width: 343px; 
-  height: 680px; 
-  -webkit-border-radius: 8px/7px; 
-  -moz-border-radius: 8px/7px; 
-  border-radius: 8px/7px; 
-  background-color: #ebebeb; 
-  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-  box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  width: 343px;
+  height: 680px;
+  -webkit-border-radius: 8px/7px;
+  -moz-border-radius: 8px/7px;
+  border-radius: 8px/7px;
+  background-color: #ebebeb;
+  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.31);
+  box-shadow: 1px 2px 5px rgba(0,0,0,.31);
   border: solid 1px #cbc9c9;
 }
 
@@ -113,18 +113,18 @@ hr{
 }
 
 input[type=text],input[type=password]{
-  width: 200px; 
-  height: 39px; 
-  -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
-  -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px; 
-  border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
-  background-color: #fff; 
-  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  width: 200px;
+  height: 39px;
+  -webkit-border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
+  -moz-border-radius: 0px 4px 4px 0px/0px 0px 4px 4px;
+  border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+  box-shadow: 1px 2px 5px rgba(0,0,0,.09);
   border: solid 1px #cbc9c9;
   margin-left: -5px;
-  margin-top: 13px; 
+  margin-top: 13px;
   padding-left: 10px;
 }
 
@@ -138,13 +138,13 @@ input[type=password]{
   background-color: #3a57af;
   padding: 8px 0px 8px 15px;
   margin-left: 15px;
-  -webkit-border-radius: 4px 0px 0px 4px; 
-  -moz-border-radius: 4px 0px 0px 4px; 
+  -webkit-border-radius: 4px 0px 0px 4px;
+  -moz-border-radius: 4px 0px 0px 4px;
   border-radius: 4px 0px 0px 4px;
   color: white;
   -webkit-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
-  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  -moz-box-shadow: 1px 2px 5px rgba(0,0,0,.09);
+  box-shadow: 1px 2px 5px rgba(0,0,0,.09);
   border: solid 0px #cbc9c9;
 }
 
@@ -167,15 +167,15 @@ a.button {
   display: inline-block;
   float: right;
   text-decoration: none;
-  width: 50px; height: 27px; 
-  -webkit-border-radius: 5px; 
-  -moz-border-radius: 5px; 
-  border-radius: 5px; 
-  background-color: #3a57af; 
-  -webkit-box-shadow: 0 3px rgba(58,87,175,.75); 
-  -moz-box-shadow: 0 3px rgba(58,87,175,.75); 
+  width: 50px; height: 27px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #3a57af;
+  -webkit-box-shadow: 0 3px rgba(58,87,175,.75);
+  -moz-box-shadow: 0 3px rgba(58,87,175,.75);
   box-shadow: 0 3px rgba(58,87,175,.75);
-  transition: all 0.1s linear 0s; 
+  transition: all 0.1s linear 0s;
   top: 0px;
   position: relative;
 }
@@ -183,10 +183,10 @@ a.button {
 a.button:hover {
   top: 3px;
   background-color:#2e458b;
-  -webkit-box-shadow: none; 
-  -moz-box-shadow: none; 
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
-  
+
 }
 
 </style>
@@ -195,10 +195,10 @@ a.button:hover {
   <h1>Registration</h1>
 
   <form action="{% url 'signup' %}" method="POST">
-      
+
     <hr>
     <div class="accounttype">
-      <input type="radio" value="student" id="radioOne" name="person" checked/>
+      <input type="radio" value="student" id="radioOne" name="person" />
       <label for="radioOne" class="radio">Student</label>
       <input type="radio" value="professor" id="radioTwo" name="person" />
       <label for="radioTwo" class="radio">Professor</label>
@@ -224,10 +224,10 @@ a.button:hover {
     <label for="male" class="radio" chec>Male</label>
     <input type="radio" value="None" id="female" name="gender" />
     <label for="female" class="radio">Female</label>
-   </div> 
+   </div>
    <p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
    <input type="submit" class="button" value="register" name="register" id="registerbutton">
-   
+
    {% csrf_token %}
   </form>
 </div>

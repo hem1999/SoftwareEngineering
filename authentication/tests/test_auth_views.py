@@ -25,7 +25,7 @@ class Testview(TestCase):
 #testing signin view
 
 	def test_signin(self):
-	
+
 		path = reverse('signin')
 		request = RequestFactory().get(path)
 		print(request)
@@ -39,13 +39,13 @@ class Testview(TestCase):
 		request = RequestFactory().get(path)
 
 		c = Client()
-		response = c.post('/signup/',{'name':'tester','email':'tester@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':12346789,'url':'Nothing','password':'secretismine','accounttype':'professor'})
+		response = c.post('/signup/',{'name':'tester','email':'tester@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':12346789,'url':'Nothing','password':'secretismine','person':'professor'})
 		print(response)
 		response = c.post('/signin/',{'username':'tester','password':'secretismine'},follow=True)
 		assert response.status_code==200
 	def test_signup_student(self):
 		c = Client()
-		response = c.post('/signup/',{'name':'testerstudent','email':'tester@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':12346789,'url':'Nothing','password':'secretismine','accounttype':'Student'})
+		response = c.post('/signup/',{'name':'testerstudent','email':'tester@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':12346789,'url':'Nothing','password':'secretismine','person':'student'})
 		print(response)
 		response = c.post('/signin/',{'username':'tester','password':'secretismine'},follow=True)
 		assert response.status_code==200
@@ -64,35 +64,35 @@ class Testview(TestCase):
 
 	def test_dashboard_professor(self):
 		c = Client()
-		response = c.post('/signup/',{'name':'tester','email':'tester@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':12346789,'url':'Nothing','password':'secretismine','accounttype':'professor'})
+		response = c.post('/signup/',{'name':'tester','email':'tester@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':123467890,'url':'Nothing','password':'secretismine','person':'professor'})
 		response = c.post('/signin/',{'username':'tester','password':'secretismine'})
 		response = c.get('/dashboard/',{'username':'tester'},follow=True)
 		assert response.context['accounttype']=='professor'
 
 	def test_dashboard_student(self):
 		c = Client()
-		response = c.post('/signup/',{'name':'tester','email':'tester@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':12346789,'url':'Nothing','password':'secretismine','accounttype':'student'})
-		response = c.post('/signin/',{'username':'tester','password':'secretismine'})
-		response = c.get('/dashboard/',{'username':'tester'},follow=True)
+		response = c.post('/signup/',{'name':'testers','email':'testers@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':123467890,'url':'Nothing','password':'secretismine','person':'student'})
+		response = c.post('/signin/',{'username':'testers','password':'secretismine'})
+		response = c.get('/dashboard/',{'username':'testers'},follow=True)
 		assert response.context['accounttype']=='student'
 
-	def test_edit(self):
-		c = Client()
-		response = c.post('/signup/',{'name':'tester','email':'tester@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':12346789,'url':'Nothing','password':'secretismine','accounttype':'professor'})
-		response = c.post('/signin/',{'username':'tester','password':'secretismine'})
-		response = c.post('/dashboard/edit/',{'email':'tester@gmail.com','acheivement':'acheivement','stream':'stream','contact_number':987654321})
-		assert response.url=='/dashboard/'
-
-	def test_edit_student(self):
-		c = Client()
-		response = c.post('/signup/',{'name':'tester','email':'tester@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':12346789,'url':'Nothing','password':'secretismine','accounttype':'student'})
-		response = c.post('/signin/',{'username':'tester','password':'secretismine'})
-		response = c.post('/dashboard/edit/',{'email':'tester@gmail.com','acheivement':'acheivement','stream':'stream','contact_number':987654321})
-		assert response.url=='/dashboard/'
+	# def test_edit(self):
+	# 	c = Client()
+	# 	response = c.post('/signup/',{'name':'tester','email':'tester@gmail.com','gender':1,'acheivement':'gold','stream':'cse','contact_number':123467890,'url':'Nothing','password':'secretismine','person':'professor'})
+	# 	response = c.post('/signin/',{'username':'tester','password':'secretismine'})
+	# 	response = c.post('/dashboard/edit/',{'acheivement':'acheivement','stream':'stream'})
+	# 	assert response.url=='/dashboard/'
+	#
+	# def test_edit_student(self):
+	# 	c = Client()
+	# 	response = c.post('/signup/',{'name':'tester','email':'tester@gmail.com','gender':1,'acheivement':'gold','stream':'cse','contact_number':123467890,'url':'Nothing','password':'secretismine','person':'student'})
+	# 	response = c.post('/signin/',{'username':'tester','password':'secretismine'})
+	# 	response = c.post('/dashboard/edit/',{'acheivement':'acheivement','stream':'stream'})
+	# 	assert response.url=='/dashboard/'
 
 	def test_logOut(self):
 		c = Client()
-		response = c.post('/signup/',{'name':'tester','email':'tester@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':12346789,'url':'Nothing','password':'secretismine','accounttype':'professor'})
+		response = c.post('/signup/',{'name':'tester','email':'tester@gmail.com','gender':1,'acheivement':'None','stream':'None','contact_number':12346789,'url':'Nothing','password':'secretismine','person':'professor'})
 		response = c.post('/signin/',{'username':'tester','password':'secretismine'})
 		response = c.get('/logout/')
 		print(response)

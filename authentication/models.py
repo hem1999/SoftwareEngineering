@@ -5,7 +5,7 @@ from django.contrib.auth.models import Permission, User
 
 class Professor(models.Model):
     name= models.CharField(max_length= 200)
-    email= models.EmailField()  
+    email= models.EmailField( )
     contact_number = models.IntegerField()
     acheivements = models.CharField(max_length = 200)
     stream = models.CharField(max_length=200)
@@ -21,14 +21,14 @@ class Project(models.Model):
     proj_description = models.CharField(max_length = 200)
 
 class Project_user(models.Model):
-    user_id = models.ForeignKey(Professor, on_delete=models.CASCADE)
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     project_id = models.ForeignKey(Project , on_delete = models.CASCADE)
 
 
 class Student(models.Model):
     name= models.CharField(max_length= 200)
-    email= models.EmailField()
-    contact_number = models.IntegerField()
+    email= models.EmailField( )
+    contact_number = models.IntegerField( )
     acheivements = models.CharField(max_length = 200)
     stream = models.CharField(max_length=200)
     username=models.ForeignKey(User,on_delete=models.CASCADE)
@@ -39,5 +39,3 @@ class Join_team(models.Model):
     from_user=models.ForeignKey(User,on_delete=models.CASCADE)
     to_user = models.IntegerField()
     status = models.BooleanField()
-
-    

@@ -3,12 +3,24 @@
 
 <body>
     <h1>PROJECTS</h1>
+    <h5><span class="label label-danger">Projects ∝ SKILLS</span> <span class="label label-primary">Projects are goog for health</span></h5>
+    <hr>
+    <br>
     {% for i in proj %}
-    <h2>{{ i.proj_name }}</h4><br>
-    <h4>{{ i.proj_description }}</h5>
+    <h2><b>{{ i.proj_name }}</b></h4>
+    <p>{{ i.proj_description }}</p>
         <form method="POST" action="{% url 'join_team'  %}">
                 {% csrf_token %}
-            <input type="submit" value="Join Team">
+                <div class="col-md-4 pl-1">
+                        <div class="form-group">
+                                <button type="submit" class="btn btn-success pull-right">Join Team</button>
+                        </div>
+                    </div>   
+            <br>
+            
+            <hr>
+            <br>
+            <br>
             <input type="text" value="{{ i.id }}" name="proj_id" hidden >
       
         </form>
