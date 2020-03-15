@@ -69,6 +69,9 @@ def SinglePublication(request,authorName,pubind):
 	originalUrl=None
 	year = None
 	context = {}
+	citedby = None
+	idCitations = None
+	idScholarcitedby = None
 
 	title = myPublication.bib['title']
 	abstract = re.sub('<[^>]+>', '', str(myPublication.bib['abstract']))
@@ -85,9 +88,14 @@ def SinglePublication(request,authorName,pubind):
 		volume = myPublication.bib['volume']
 	if 'year' in myPublication.bib.keys():
 		year = myPublication.bib['year']
-	citedby = myPublication.citedby
-	idCitations = myPublication.id_citations
-	idScholarcitedby = myPublication.id_scholarcitedby
+	if 'citedby' in myPublication.bib.keys():
+
+		citedby = myPublication.bib['citedby']
+	if 'id_citations' in myPublication.bib.keys():
+
+		idCitations = myPublication.bib['id_citations']
+	if 'id_scholarcitedby' in myPublication.bib.keys():
+		idScholarcitedby = myPublication.id_scholarcitedby
 
 
 
