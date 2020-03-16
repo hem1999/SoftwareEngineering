@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import render , redirect
-from django.http import HttpResponse , HttpResponseRedirect
+from django.http import HttpResponse , HttpResponseRedirect 
 from .models import Student , Professor , Project_user,   Project , Join_team
 from django.db import connection
 from django.views import generic
@@ -54,7 +54,7 @@ def signin(request):
     else:
         return render(request , "authentication/login.html",{'msg': "." })
 
-def dashboard(request):
+def dashboard(request , **kwargs):
     msg=""
     try:
         obj = Student.objects.get(name = request.user.username)
@@ -70,12 +70,12 @@ def edit(request):
         obj = Student.objects.get(name = request.user.username)
     except Student.DoesNotExist:
         obj = Professor.objects.get(name = request.user.username)
-
-    if(request.method=="POST"):
-        #obj.email=request.POST.get('email')
+    
+    if(request.method=="POST"):    
+        obj.email=request.POST.get('email')
         obj.acheivements = request.POST.get('acheivements')
         obj.stream = request.POST.get('stream')
-        #obj.contact_number = request.POST.get('contact_number')
+        obj.contact_number = request.POST.get('contact_number')
         # obj.url = request.POST.get('url')
         obj.save()
         return redirect('dashboard')
@@ -92,7 +92,7 @@ def view_projects(request):
         pr=proj[i].project_id
         l.append(Project.objects.get(id = pr.id))
     return render(request,"authentication/view_proj.html" , {'proj' :l})
-
+    
 
 def add_projects(request):
     if request.method=="POST":
@@ -128,7 +128,7 @@ def requests(request):
 
         req = Join_team.objects.filter(to_user = user.id , status= False )
         return render(request,"authentication/requests.html" ,{'req':req})
-
+        
 
 def join_team(request):
     if request.method =="POST":
@@ -153,7 +153,7 @@ def search_projects(request):
 
 
 def status(request):
-    return redirect('index')
+    return redirect('index') 
 
 def logoutView(request):
     logout(request)
